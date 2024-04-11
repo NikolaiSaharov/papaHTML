@@ -1,0 +1,135 @@
+function calculate() {
+    let lastResult = 0; // Переменная для сохранения последнего результата
+    let continueCalculation = true; // Переменная для управления циклом
+
+    while (continueCalculation) {
+        let num1 = parseFloat(prompt("Введите первое число:"));
+        let num2 = parseFloat(prompt("Введите второе число:"));
+        let operator = prompt("Введите оператор (+, -, *, /, ^, sqrt, %, pi, sin, cos, tan, log) или 'exit' для выхода:");
+
+        let result;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    return "Ошибка: деление на ноль!";
+                }
+                break;
+            case '^':
+                result = Math.pow(num1, num2);
+                break;
+            case 'sqrt':
+                result = Math.sqrt(num1);
+                break;
+            case '%':
+                result = num1 * (num2 / 100);
+                break;
+            case 'pi':
+                result = Math.PI;
+                break;
+            case 'sin':
+                result = Math.sin(num1);
+                break;
+            case 'cos':
+                result = Math.cos(num1);
+                break;
+            case 'tan':
+                result = Math.tan(num1);
+                break;
+            case 'log':
+                result = Math.log(num1);
+                break;
+            case 'exit':
+                continueCalculation = false; // Выход из цикла
+                break;
+            default:
+                return "Ошибка: неверный оператор!";
+        }
+
+        if (operator !== 'exit') {
+            lastResult = result; // Сохранение последнего результата
+            console.log(`${num1} ${operator} ${num2} = ${result}`);
+        }
+    }
+
+    console.log("Программа завершена.");
+}
+
+calculate();function calculate() {
+    let lastResult = 0; // Переменная для сохранения последнего результата
+    let continueCalculation = true; // Переменная для управления циклом
+
+    while (continueCalculation) {
+        let num1 = parseFloat(prompt("Введите первое число:"));
+        let num2 = parseFloat(prompt("Введите второе число:"));
+        let operator = prompt("Введите оператор (+, -, *, /, ^, sqrt, %, pi, sin, cos, tan, log) или 'exit' для выхода:");
+
+        let result;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    return "Ошибка: деление на ноль!";
+                }
+                break;
+            case '^':
+                result = Math.pow(num1, num2);
+                break;
+            case 'sqrt':
+                result = Math.sqrt(num1);
+                break;
+            case '%':
+                result = num1 * (num2 / 100);
+                break;
+            case 'pi':
+                result = Math.PI;
+                break;
+            case 'sin':
+                result = Math.sin(num1);
+                break;
+            case 'cos':
+                result = Math.cos(num1);
+                break;
+            case 'tan':
+                result = Math.tan(num1);
+                break;
+            case 'log':
+                result = Math.log(num1);
+                break;
+            case 'exit':
+                continueCalculation = false; // Выход из цикла
+                break;
+            default:
+                return "Ошибка: неверный оператор!";
+        }
+
+        if (operator !== 'exit') {
+            lastResult = result; // Сохранение последнего результата
+            console.log(`${num1} ${operator} ${num2} = ${result}`);
+        }
+    }
+
+    console.log("Программа завершена.");
+}
+
+calculate();
